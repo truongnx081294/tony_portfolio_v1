@@ -1,95 +1,102 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import styles from "./page.module.css";
+import "./page.css";
+import logo from "@/assets/images/logo.png";
+import bg from "@/assets/images/BG.png";
+import imageAbout from "@/assets/images/imageAbout.jpg";
+import imageHero from "@/assets/images/imageHero.svg";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <header>
+        <nav>
+          <div className="nav-logo">
+            <a href="">
+              <Image src={logo} alt="" />
+            </a>
+          </div>
+          <ul className="menu">
+            <li className="nav-item selected">
+              <a href="" className="nav-link">
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="" className="nav-link">
+                About
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="" className="nav-link">
+                Skills
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="" className="nav-link">
+                Works
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="" className="nav-link">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section className="section section-home">
+        <h1 className="name-author">
+          Hi, I'm <span>Truong Gia</span>
+        </h1>
+        <h3>Front-end Developer</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <ul className="social-list">
+          <li className="item-social">
+            <a href="">
+              <i className="ri-facebook-circle-fill"></i>
+            </a>
+          </li>
+          <li className="item-social">
+            <a href="">
+              <i className="ri-github-fill"></i>
+            </a>
+          </li>
+          <li className="item-social">
+            <a href="">
+              <i className="ri-linkedin-box-fill"></i>
+            </a>
+          </li>
+          <li className="item-social">
+            <a href="">
+              <i className="ri-skype-fill"></i>
+            </a>
+          </li>
+        </ul>
+
+        <button className="btn navigation-button">
+          <i className="ri-arrow-down-circle-line"></i> Scroll
+        </button>
+      </section>
+
+      <section className="section section-about">
+
+        <div className="image-about">
+
+          <Image src={imageAbout} alt="" />
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+        <div className="content-about">
+          <h2 className="title-section">About Me</h2>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Repellendus rem eos aliquid quo rerum temporibus ipsum distinctio
+            numquam ut omnis placeat, nam sint atque quos dolorem laborum?
+            Rerum, esse dolorem.
           </p>
-        </a>
-      </div>
+
+          <button className="btn"> Download CV</button>
+        </div>
+      </section>
     </main>
   );
 }
